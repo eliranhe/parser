@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoicesParser", "InvoicesParser\InvoicesParser.csproj", "{6852EFCF-E0DC-4577-BAC0-1A3E2D310C2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoicesParses.Tests", "InvoicesParses.Tests\InvoicesParses.Tests.csproj", "{F918B23A-E5CA-429F-91B7-79821A6487B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6852EFCF-E0DC-4577-BAC0-1A3E2D310C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6852EFCF-E0DC-4577-BAC0-1A3E2D310C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6852EFCF-E0DC-4577-BAC0-1A3E2D310C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6852EFCF-E0DC-4577-BAC0-1A3E2D310C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F918B23A-E5CA-429F-91B7-79821A6487B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F918B23A-E5CA-429F-91B7-79821A6487B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F918B23A-E5CA-429F-91B7-79821A6487B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F918B23A-E5CA-429F-91B7-79821A6487B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
