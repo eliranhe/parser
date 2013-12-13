@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 using InvoicesParser;
 using NUnit.Framework;
 using Autofac;
@@ -34,5 +29,29 @@ namespace InvoicesParses.Tests
 
             Assert.That(outputLines, Is.EqualTo(expectedOutputLines));
         }
+
+        [Test]
+        public void Parse_EmptyFile_EmptyFile()
+        {
+            var inputLines = new string[0];
+            var expectedOutputLines = new string[0];
+
+            var outputLines = _invoiceParser.Parse(inputLines);
+
+            Assert.That(outputLines, Is.EqualTo(expectedOutputLines));
+        }
+
+        [Test]
+        public void Parse_FileWithOneCharacter_FileWithOneLineWithQuestionMarkAndIllegel()
+        {
+            var inputLines = new[] { "-" };
+            var expectedOutputLines = new[] { "? ILLEGAL" };
+
+            var outputLines = _invoiceParser.Parse(inputLines);
+
+            Assert.That(outputLines, Is.EqualTo(expectedOutputLines));
+        }
+
+
     }
 }

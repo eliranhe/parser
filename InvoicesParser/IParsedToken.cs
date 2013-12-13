@@ -3,29 +3,26 @@ namespace InvoicesParser
     public interface IParsedToken
     {
         bool ParsedSuccessfully { get; }
-        char? Char { get; }
+        char Character { get; }
     }
 
     public class ParsedToken : IParsedToken
     {
-        private readonly bool _parsedSuccessfully;
-        private readonly char? _c;
+        private readonly char? _character;
 
-        public ParsedToken(bool parsedSuccessfully, char? c)
+        public ParsedToken(char? character)
         {
-            _parsedSuccessfully = parsedSuccessfully;
-            _c = c;
+            _character = character;
         }
 
         public bool ParsedSuccessfully
         {
-            get { return _parsedSuccessfully; }
-
+            get { return _character.HasValue; }
         }
 
-        public char? Char
+        public char Character
         {
-            get { return _c; }
+            get { return _character.Value; }
         }
     }
 }

@@ -19,7 +19,7 @@ namespace InvoicesParser
 
         public string AsLine()
         {
-            var invoiceNumber = new string(_parsedTokens.Select(t => t.ParsedSuccessfully ? t.Char.Value : '?').ToArray());
+            var invoiceNumber = new string(_parsedTokens.Select(t => t.ParsedSuccessfully ? t.Character : '?').ToArray());
             if (IsLegal)
                 return invoiceNumber;
             return invoiceNumber + " ILLEGAL";

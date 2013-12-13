@@ -18,7 +18,7 @@ namespace InvoicesParser
         {
             char c;
             var parsedSuccessfully = _tokensRepository.TryGetCharacter(token, out c);
-            return new ParsedToken(parsedSuccessfully, parsedSuccessfully ? (char?)c : null);
+            return new ParsedToken(parsedSuccessfully ? (char?)c : null);
         }
     }
 }
